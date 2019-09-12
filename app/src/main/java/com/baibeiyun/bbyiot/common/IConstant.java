@@ -57,4 +57,11 @@ public interface IConstant {
     int launch_product_query = 1000017;
     int quit = 1000018;
     int return_scan_result = 1000019;
+
+
+    /**
+     * 萤石云的appkey
+     */
+    String appKey = "2b4dcf4a609341e690ad4bc017428415";
+
 }
