@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gray_corners_bg"
+    android:padding="20.0dip">
+
+    <ProgressBar
+        android:id="@+id/waiting_pb"
+        style="@style/Widget.ProgressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="true" />
+
+    <TextView
+        android:id="@+id/waiting_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/waiting_pb"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@color/main_color"
+        android:text="加载中..."
+        android:textSize="15sp" />
+
+</RelativeLayout>

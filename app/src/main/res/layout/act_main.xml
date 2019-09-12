@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".module.main.ui.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/act_main_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+
+        <View
+            android:id="@+id/divide"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e0e0e0" />
+
+
+        <!-- 底部菜单栏 -->
+        <RadioGroup
+            android:id="@+id/act_main_group_radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- 首页 -->
+            <RelativeLayout
+                android:id="@+id/act_main_rl_radio_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:paddingTop="5dp">
+
+                <RadioButton
+                    android:id="@+id/act_main_radio_home"
+                    style="@style/main_tab_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:checked="true"
+                    android:drawableTop="@drawable/main_tab_home_selector_style"
+                    android:gravity="center_horizontal"
+                    android:text="首页"
+                    android:textColor="@drawable/main_tab_text_color"
+                    android:textSize="11sp" />
+            </RelativeLayout>
+
+
+            <!-- 监测 -->
+            <RelativeLayout
+                android:id="@+id/act_main_rl_radio_testing"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:paddingTop="5dp">
+
+                <RadioButton
+                    android:id="@+id/act_main_radio_testing"
+                    style="@style/main_tab_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:checked="true"
+                    android:drawableTop="@drawable/main_tab_testing_selector_style"
+                    android:gravity="center_horizontal"
+                    android:text="监测"
+                    android:textColor="@drawable/main_tab_text_color"
+                    android:textSize="11sp" />
+            </RelativeLayout>
+
+            <!-- 发现 -->
+            <RelativeLayout
+                android:id="@+id/act_main_rl_radio_find"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:paddingTop="5dp">
+
+                <RadioButton
+                    android:id="@+id/act_main_radio_find"
+                    style="@style/main_tab_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:checked="true"
+                    android:drawableTop="@drawable/main_tab_find_selector_style"
+                    android:gravity="center_horizontal"
+                    android:text="发现"
+                    android:textColor="@drawable/main_tab_text_color"
+                    android:textSize="11sp" />
+            </RelativeLayout>
+
+
+            <!--  我的 -->
+            <RelativeLayout
+                android:id="@+id/act_main_rl_radio_rl_radio_account"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:paddingTop="5dp">
+
+                <RadioButton
+                    android:id="@+id/act_main_radio_account"
+                    style="@style/main_tab_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:drawableTop="@drawable/main_tab_mine_selector_style"
+                    android:gravity="center_horizontal"
+                    android:text="我的"
+                    android:textColor="@drawable/main_tab_text_color"
+                    android:textSize="11sp" />
+
+            </RelativeLayout>
+
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

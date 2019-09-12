@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/item_message_tv_message_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="2019年5月5日 10:00"
+        android:textColor="#999999"
+        android:textSize="13sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_home_statistics_bg">
+
+
+        <TextView
+
+            android:id="@+id/item_message_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="监控告警"
+            android:textColor="#333333"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/item_message_view_read_state"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/shape_deivce_state_lixian" />
+
+
+        <TextView
+            android:id="@+id/item_message_tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_message_tv_title"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="二氧化碳设备超标二氧化碳设备超标二氧化碳设二氧化碳设备超标二氧化碳设备超标二二氧化碳设备超标二氧化碳设备超标二氧化碳设二氧化碳设备超标二氧化碳设备超标二"
+            android:textColor="#999999"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:id="@+id/item_message_rl_look_details"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/item_message_tv_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+
+                android:background="@color/base_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="查看详情"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/icon_common_arrow_right" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

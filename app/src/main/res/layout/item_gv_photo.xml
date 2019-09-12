@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+
+        <!--外部的框-->
+        <RelativeLayout
+            android:id="@+id/item_gv_photo_rl_kuang"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerInParent="true">
+
+            <!--上-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#eeeeee" />
+
+            <!--下-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/line_e" />
+
+            <!--左-->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line_e" />
+
+            <!--右-->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/line_e" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/siv_photo"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/btn_del_photo" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+

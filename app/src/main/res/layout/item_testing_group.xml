@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="@color/base_bg" />
+
+
+    <LinearLayout
+        android:id="@+id/item_testing_group_ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:padding="15dp">
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="16dp"
+            android:background="@color/main_color" />
+
+        <TextView
+            android:id="@+id/item_testing_group_tv_group_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="车间2"
+            android:textColor="#333333"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+
+    <com.baibeiyun.bbyiot.view.NOScrollListView
+        android:id="@+id/item_testing_group_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@color/transparent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+
+</LinearLayout>

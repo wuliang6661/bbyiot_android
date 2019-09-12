@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="14dp"
+        android:background="#ECECEC" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/goods_line_color" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/goods_line_color" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/goods_line_color" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/goods_line_color" />
+
+            <ImageView
+                android:id="@+id/item_order_iv_pic"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/item_order_tv_goods_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/rl_image"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:minLines="2"
+            android:text="商品名称"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_order_tv_goods_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/rl_image"
+            android:gravity="center_vertical">
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_order_evaluation"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="该设备很好，简单实用，都不用怎么配置，扫码就可以使用，6 6666"
+            android:textColor="#333333"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_name_and_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="end"
+            android:text="已匿名 2019/07/07 21:44:11"
+            android:textColor="#9A9A9A"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_pingfen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3.8"
+                    android:textColor="#F5A623"
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="分"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="5dp"
+                android:text="用户评分"
+                android:textColor="#9A9A9A"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="88dp"
+            android:background="#D8D8D8" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="服务"
+                    android:textColor="#333333"
+                    android:textSize="12sp" />
+
+                <com.baibeiyun.bbyiot.view.FloatRatingBar
+
+                    android:id="@+id/act_evaluate_details_rating_bar1"
+                    android:layout_width="110dp"
+                    android:layout_height="18dp"
+                    app:FloatRatingBarStarBackgroundDrawable="@mipmap/star_grey"
+                    app:FloatRatingBarStarDistance="5dp"
+                    app:FloatRatingBarStarForegroundDrawable="@drawable/drawable_star_clip"
+                    app:FloatRatingBarStarHeight="15dp"
+                    app:FloatRatingBarStarRate="4.6"
+                    app:FloatRatingBarStarWidth="15dp" />
+
+                <TextView
+                    android:id="@+id/act_evaluate_details_tv_score1"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="4.6"
+                    android:textColor="#333333"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="质量"
+                    android:textColor="#333333"
+                    android:textSize="12sp" />
+
+                <com.baibeiyun.bbyiot.view.FloatRatingBar
+                    android:id="@+id/act_evaluate_details_rating_bar2"
+                    android:layout_width="110dp"
+                    android:layout_height="18dp"
+                    app:FloatRatingBarStarBackgroundDrawable="@mipmap/star_grey"
+                    app:FloatRatingBarStarDistance="5dp"
+                    app:FloatRatingBarStarForegroundDrawable="@drawable/drawable_star_clip"
+                    app:FloatRatingBarStarHeight="15dp"
+                    app:FloatRatingBarStarRate="5.0"
+                    app:FloatRatingBarStarWidth="15dp" />
+
+                <TextView
+                    android:id="@+id/act_evaluate_details_tv_score2"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="5.0"
+                    android:textColor="#333333"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="价格"
+                    android:textColor="#333333"
+                    android:textSize="12sp" />
+
+                <com.baibeiyun.bbyiot.view.FloatRatingBar
+                    android:id="@+id/act_evaluate_details_rating_bar3"
+                    android:layout_width="110dp"
+                    android:layout_height="18dp"
+                    app:FloatRatingBarStarBackgroundDrawable="@mipmap/star_grey"
+                    app:FloatRatingBarStarDistance="5dp"
+                    app:FloatRatingBarStarForegroundDrawable="@drawable/drawable_star_clip"
+                    app:FloatRatingBarStarHeight="15dp"
+                    app:FloatRatingBarStarRate="3.7"
+                    app:FloatRatingBarStarWidth="15dp" />
+
+                <TextView
+                    android:id="@+id/act_evaluate_details_tv_score3"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="3.7"
+                    android:textColor="#333333"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#D8D8D8" />
+
+</LinearLayout>

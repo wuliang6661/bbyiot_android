@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+        <RelativeLayout
+            android:id="@+id/act_device_switch_details_rl_mianban"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/act_device_switch_details_tv_mianban"
+                android:layout_width="wrap_content"
+                android:text="控制面板"
+                android:textColor="#212B46"
+                android:textSize="18sp"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/act_device_switch_details_view_mianban"
+                android:layout_width="95dp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/main_color"
+                android:layout_alignParentBottom="true"
+                android:layout_height="2dp"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/act_device_switch_details_rl_info"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/act_device_switch_details_tv_info"
+                android:layout_width="wrap_content"
+                android:text="基本信息"
+                android:textColor="#212B46"
+                android:textSize="18sp"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/act_device_switch_details_view_info"
+                android:layout_width="95dp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/main_color"
+                android:layout_alignParentBottom="true"
+                android:layout_height="2dp"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/act_device_switch_details_rl_map"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/act_device_switch_details_tv_map"
+                android:layout_width="wrap_content"
+                android:text="查看地图"
+                android:textColor="#212B46"
+                android:textSize="18sp"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/act_device_switch_details_view_map"
+                android:layout_width="95dp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/main_color"
+                android:layout_alignParentBottom="true"
+                android:layout_height="2dp"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/base_bg"
+        android:layout_height="1dp"/>
+
+    <FrameLayout
+        android:id="@+id/act_device_num_details_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

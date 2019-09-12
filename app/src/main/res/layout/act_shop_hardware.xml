@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <com.baibeiyun.bbyiot.view.pullableview.special.MyPullToRefreshLayout
+        android:id="@+id/act_shop_hardware_pulltorefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/pull_refresh_head2" />
+
+        <com.baibeiyun.bbyiot.view.pullableview.PullableListView
+            android:id="@+id/act_shop_hardware_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/base_bg"
+            android:dividerHeight="1dp" />
+
+        <include layout="@layout/pull_load_more2" />
+
+    </com.baibeiyun.bbyiot.view.pullableview.special.MyPullToRefreshLayout>
+
+
+</LinearLayout>

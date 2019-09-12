@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="wrap_content"
+            app:riv_corner_radius="10dp"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:background="@mipmap/logo_2" />
+    </RelativeLayout>
+
+
+    <!-- 账号 -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:src="@mipmap/login_shouji" />
+
+        <!--  账号 -->
+        <EditText
+            android:id="@+id/act_login_new_et_account"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:hint="请输入账号"
+            android:maxLength="11"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:textColor="#333333"
+            android:textColorHint="#cccccc"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/act_login_im_xx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:src="@mipmap/xx" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#aaaaaa" />
+
+    <LinearLayout
+        android:id="@+id/act_login_new_ll_psw"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:src="@mipmap/login_mima" />
+
+        <!--  密码 -->
+        <EditText
+            android:id="@+id/act_login_new_et_psw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:hint="请输入密码6~18位密码"
+            android:maxLength="18"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:password="true"
+            android:singleLine="true"
+            android:textColor="#333333"
+            android:textColorHint="#cccccc"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/act_login_new_line_psw"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#aaaaaa" />
+
+
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/act_login_new_line_yzm"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#aaaaaa" />
+
+    <!--    注册、忘记密码  -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="15dp">
+
+
+
+
+        <TextView
+            android:id="@+id/act_login_new_tv_forget_psw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:text="忘记密码"
+            android:visibility="gone"
+            android:textColor="@color/main_color" />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/act_login_new_btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_login_selector"
+
+        android:text="登录"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="登录成功即代表同意"
+            android:textColor="@color/color_3"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/act_login_new_tv_xieyi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="《服务协议》"
+            android:textColor="@color/main_color"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

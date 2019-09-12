@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+
+    <TextView
+        android:id="@+id/act_message_details_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="设备告警消息"
+        android:textColor="#212B46"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/act_message_details_tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="2019年5月5日 10:00"
+        android:textColor="#999999"
+        android:textSize="13sp" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/base_bg" />
+
+
+    <TextView
+        android:id="@+id/act_message_details_tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:text="二氧化碳设备超标二氧化碳设备超标二氧化碳设二氧化碳设备超标二氧化碳设备超标二二氧化碳设备超标二氧化碳设备超标二氧化碳设二氧化碳设备超标二氧化碳设备超。"
+        android:textColor="#999999"
+        android:textSize="15sp" />
+
+
+</LinearLayout>

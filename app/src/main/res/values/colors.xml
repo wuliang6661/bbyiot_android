@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#4645D0</color>
+    <color name="colorPrimaryDark">#4645D0</color>
+    <color name="colorAccent">#4645D0</color>
+
+
+    <!--    常用的颜色   -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="main_color">#4645D0</color>
+    <color name="base_bg">#eeeeee</color>
+    <color name="transparent">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="color_3">#333333</color>
+
+    <color name="transparent_main">#224645D0</color>
+
+
+    <color name="line_color_01">#2CACE2</color>
+    <color name="line_color_02">#565AFB</color>
+    <color name="line_color_03">#803ED8</color>
+    <color name="line_color_04">#5CCC7A</color>
+
+
+    <color name="color_red_alpa">#99FD6464</color>
+    <color name="color_green_alpa">#999CD480</color>
+    <color name="color_F8B551">#F8B551</color>
+
+    <color name="line_e">#eeeeee</color>
+
+    <color name="goods_line_color">#F5F5F5</color>
+
+</resources>

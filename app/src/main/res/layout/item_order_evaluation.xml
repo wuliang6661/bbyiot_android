@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/goods_line_color" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/goods_line_color" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/goods_line_color" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/goods_line_color" />
+
+            <ImageView
+                android:id="@+id/item_order_iv_pic"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/item_order_tv_goods_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/rl_image"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:minLines="2"
+            android:text="商品名称"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_order_tv_goods_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/rl_image"
+            android:gravity="center_vertical">
+
+            <com.baibeiyun.bbyiot.view.FloatRatingBar
+                android:id="@+id/item_order_evaluation_rating_bar"
+                android:layout_width="120dp"
+                android:layout_height="18dp"
+                app:FloatRatingBarStarBackgroundDrawable="@mipmap/star_grey"
+                app:FloatRatingBarStarDistance="5dp"
+                app:FloatRatingBarStarForegroundDrawable="@drawable/drawable_star_clip"
+                app:FloatRatingBarStarHeight="18dp"
+                app:FloatRatingBarStarRate="3.5"
+                app:FloatRatingBarStarWidth="18dp" />
+
+            <TextView
+                android:id="@+id/item_order_evaluation_tv_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.5"
+                android:textColor="#F5A623"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="2dp"
+                android:text="分"
+                android:textColor="#333333"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_order_tv_goods_monery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/rl_image"
+            android:text="已匿名 2019／07／07"
+            android:textColor="#9A9A9A"
+            android:textSize="12sp" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_common_arrow_right" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_order_evaluation"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:text="该设备很好，简单实用，都不用怎么配置，扫码就可以使用，6 6666"
+        android:textSize="12sp" />
+
+</LinearLayout>

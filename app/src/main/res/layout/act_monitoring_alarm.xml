@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+
+        <RelativeLayout
+            android:id="@+id/act_monitoring_alarm_rl_real_baojing"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/act_monitoring_alarm_tv_real_baojing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="实时报警"
+                android:textColor="#212B46"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/act_monitoring_alarm_view_real_baojing"
+                android:layout_width="70dp"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/main_color" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/act_monitoring_alarm_rl_history_baojing"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/act_monitoring_alarm_tv_history_baojing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="历史报警"
+                android:textColor="#212B46"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/act_monitoring_alarm_view_history_baojing"
+                android:layout_width="70dp"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/main_color"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="1dp"
+        android:background="#ECECEC" />
+
+
+    <include layout="@layout/layout_analysis_tip1" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_x_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="5dp"
+                android:paddingTop="6dp"
+                android:text="次数"
+                android:textColor="#333333"
+                android:textSize="11sp" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/act_monitoring_alarm_barchart"
+                android:layout_width="match_parent"
+                android:layout_height="230dp" />
+
+            <TextView
+                android:id="@+id/tv_y_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="end"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"
+                android:text="报警类型"
+                android:textColor="#333333"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#F2F2F2"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="告警信息"
+                android:textColor="#212B46"
+                android:textSize="16sp" />
+
+            <com.baibeiyun.bbyiot.view.NOScrollListView
+                android:id="@+id/act_monitoring_alarm_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/transparent"
+                android:dividerHeight="0dp"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

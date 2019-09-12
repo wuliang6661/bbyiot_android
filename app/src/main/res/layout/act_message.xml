@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/common_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/act_message_rl_pingtai_msg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/act_message_tv_pingtai_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="平台消息"
+                android:textColor="#212B46"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/act_message_view_dit_pingtai_msg"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:visibility="invisible"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/act_message_tv_pingtai_msg"
+                android:background="@drawable/shape_deivce_state_lixian" />
+
+            <View
+                android:id="@+id/act_message_view_line_pingtai_msg"
+                android:layout_width="95dp"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/main_color" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/act_message_rl_device_msg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/act_message_tv_device_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="设备消息"
+                android:textColor="#212B46"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/act_message_view_dit_device_msg"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginLeft="5dp"
+                android:visibility="invisible"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/act_message_tv_device_msg"
+                android:background="@drawable/shape_deivce_state_lixian" />
+
+            <View
+                android:id="@+id/act_message_view_line_device_msg"
+                android:layout_width="95dp"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/main_color" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <com.baibeiyun.bbyiot.view.pullableview.PullToRefreshLayout
+        android:id="@+id/act_message_pulltorefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/pull_refresh_head2" />
+
+        <com.baibeiyun.bbyiot.view.pullableview.PullableListView
+            android:id="@+id/act_message_pullablelistview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/transparent"
+            android:dividerHeight="10dp" />
+
+        <include layout="@layout/pull_load_more2" />
+
+    </com.baibeiyun.bbyiot.view.pullableview.PullToRefreshLayout>
+
+
+</LinearLayout>

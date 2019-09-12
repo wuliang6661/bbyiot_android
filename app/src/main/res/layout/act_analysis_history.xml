@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:id="@+id/act_analysis_history_ll_chart"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+
+        <include layout="@layout/layout_analysis_tip" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/act_analysis_history_linechart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/act_analysis_history_ll_select_condition"
+        android:visibility="gone"
+        layout="@layout/layout_analysis_select_condition"/>
+
+</LinearLayout>

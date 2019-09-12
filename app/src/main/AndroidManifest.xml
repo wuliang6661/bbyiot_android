@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.baibeiyun.bbyiot">
+    <!-- 网络权限 -->
+    <!-- //允许程序打开网络 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- //允许程序访问有关的网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- //允许程序访问Wi-Fi网络状态信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!--  -->
+    <!-- 高德地图所需 权限 -->
+    <!--  -->
+    <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- 二维码扫描权限 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" /> <!-- 使用照相机权限 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- 自动聚焦权限 -->
+    <!-- 扫码时需要的 震动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+
+    <application
+        android:name=".application.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_log"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/app_log"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".module.findshop.ui.PaySuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.findshop.ui.ShopEvaluationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.WebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.WeXin" />
+        <activity
+            android:name=".module.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".module.main.ui.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".module.login.ui.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.login.ui.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.home.ui.DeviceStateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.home.ui.MessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.home.ui.MessageDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.testing.ui.SelectGroupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.findshop.ui.ShopHardwareActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.home.ui.devicenum.DeviceNumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.home.ui.devicenum.DeviceNumDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.home.ui.devicevideo.DeviceVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.home.ui.devicevideo.DeviceVideoDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.home.ui.devicepic.DevicePictureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.home.ui.devicepic.DevicePictureDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.mine.ui.AfterSaleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.home.ui.deviceswitch.DeviceSwitchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.home.ui.deviceswitch.DeviceSwitchDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.home.ui.devicegateway.DeviceGatewayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.home.ui.devicegateway.DeviceGatewayDateilsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.search.SearchActity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".module.mine.ui.analysis.StatisticAnalysisActivityNew"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.seancode.ScanCodeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.mine.ui.SettingActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.mine.ui.MonitoringAlarmActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.mine.ui.GroupActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.mine.ui.MyInfoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".module.tools.ClipPictureActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".module.mine.ui.AboutUsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".module.mine.ui.FeedbackActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".module.mine.ui.AddressManagerActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.mine.ui.AddressEditActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.mine.ui.order.OrderActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.mine.ui.order.OrderDetailsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.mine.ui.order.OrderEvaluationListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.mine.ui.order.OrderEvaluationDetailsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.mine.ui.order.OrderLogisticsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.mine.ui.ChangePswActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.mine.ui.order.EvaluateActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.baibeiyun.bbyiot.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/rc_file_path" />
+        </provider> <!-- 高德地图 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="f71d70e81707c9e59e1c8fe7790b1c27" /> <!-- 高德定位 -->
+        <service android:name="com.amap.api.location.APSService" />
+    </application>
+
+</manifest>

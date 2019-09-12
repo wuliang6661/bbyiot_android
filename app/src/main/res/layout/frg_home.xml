@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <com.baibeiyun.bbyiot.view.pullableview.PullToRefreshLayout
+        android:id="@+id/frg_home_pulltorefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/pull_refresh_head2" />
+
+        <com.baibeiyun.bbyiot.view.pullableview.PullableScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--  头部  -->
+                <include
+                    layout="@layout/view_header_home22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+
+                <!-- 设备监测   -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="设备监测"
+                        android:textColor="#333333"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="更多"
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:src="@mipmap/icon_common_arrow_right" />
+
+                </LinearLayout>
+
+                <com.baibeiyun.bbyiot.view.NOScrollListView
+                    android:id="@+id/frg_home_listview_device_testing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:divider="@color/transparent"
+                    android:dividerHeight="10dp" />
+
+
+                <!--    全部应用    -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="设备管理"
+                        android:textColor="#333333"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <com.baibeiyun.bbyiot.view.NOScrollGirdview
+                    android:id="@+id/frg_home_girdview_device_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="4" />
+
+
+                <!--   热门设备  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="数据管理"
+                        android:textColor="#333333"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="更多"
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:src="@mipmap/icon_common_arrow_right" />
+
+                </LinearLayout>
+
+                <com.baibeiyun.bbyiot.view.NOScrollGirdview
+                    android:id="@+id/frg_home_girdview_device_hot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="4"
+                    android:verticalSpacing="8dp" />
+
+
+            </LinearLayout>
+
+
+        </com.baibeiyun.bbyiot.view.pullableview.PullableScrollView>
+
+        <include layout="@layout/pull_load_more2" />
+
+    </com.baibeiyun.bbyiot.view.pullableview.PullToRefreshLayout>
+
+</LinearLayout>

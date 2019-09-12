@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="60dp"
+        android:background="@drawable/shape_find_shop_hardware"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/item_jian_xuan_iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/icon_shop_hardware_01" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_jian_xuan_tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="工业网关"
+        android:textColor="#333333"
+        android:textSize="14sp" />
+
+</LinearLayout>

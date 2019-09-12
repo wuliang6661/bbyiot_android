@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/goods_line_color" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/goods_line_color" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/goods_line_color" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/goods_line_color" />
+
+            <ImageView
+                android:id="@+id/act_evaluate_iv_goods_pic"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/act_evaluate_tv_goods_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/rl_image"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:minLines="2"
+            android:text="商品名称"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/act_evaluate_tv_goods_monery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/rl_image"
+            android:text="¥99.00"
+            android:textColor="#F5A623"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/act_evaluate_tv_goods_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="10dp"
+            android:text="x1"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="15dp"
+        android:background="#ECECEC" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="您对以上设备使用满意吗？"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:id="@+id/act_evaluate_chcekbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:button="@drawable/common_checkbox_bg"
+            android:checked="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="匿名评价"
+            android:textColor="#333333"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="服务"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+        <com.baibeiyun.bbyiot.view.RatingBar
+            android:id="@+id/act_evaluate_rating_bar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            app:selectedNumber="0"
+            app:starDistance="10dp"
+            app:starEmptyRes="@mipmap/icon_evaluate_nor"
+            app:starHalfRes="@mipmap/icon_evaluate_check"
+            app:starIsFull="false"
+            app:starSelectedRes="@mipmap/icon_evaluate_check" />
+
+        <TextView
+            android:id="@+id/act_evaluate_tv_pingfen1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="0.0"
+            android:textColor="#333333"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="质量"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+        <com.baibeiyun.bbyiot.view.RatingBar
+            android:id="@+id/act_evaluate_rating_bar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            app:selectedNumber="0"
+            app:starDistance="10dp"
+            app:starEmptyRes="@mipmap/icon_evaluate_nor"
+            app:starHalfRes="@mipmap/icon_evaluate_check"
+            app:starIsFull="false"
+            app:starSelectedRes="@mipmap/icon_evaluate_check" />
+
+        <TextView
+            android:id="@+id/act_evaluate_tv_pingfen2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="0.0"
+            android:textColor="#333333"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="价格"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+        <com.baibeiyun.bbyiot.view.RatingBar
+            android:id="@+id/act_evaluate_rating_bar3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            app:selectedNumber="4.2"
+            app:starDistance="10dp"
+            app:starEmptyRes="@mipmap/icon_evaluate_nor"
+            app:starHalfRes="@mipmap/icon_evaluate_check"
+            app:starIsFull="false"
+            app:starSelectedRes="@mipmap/icon_evaluate_check" />
+
+        <TextView
+            android:id="@+id/act_evaluate_tv_pingfen3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="0.0"
+            android:textColor="#333333"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/act_evaluate_et_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/bg_order_evaluate"
+        android:gravity="start"
+        android:hint="请输入评价内容"
+        android:lines="6"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:textColor="#333333"
+        android:textColorHint="#aaaaaa"
+        android:textSize="14sp" />
+
+
+    <Button
+        android:id="@+id/act_evaluate_btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/shape_common_btn_bg"
+        android:text="提交评价"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+
+</LinearLayout>
